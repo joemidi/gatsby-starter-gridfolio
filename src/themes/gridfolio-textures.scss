@@ -1,0 +1,46 @@
+.gridfolio--block {
+  .gridfolio--block-content {
+    background-size: cover;
+  }
+
+  &.dark-bg {
+    .gridfolio--block-content {
+      color: #fff;
+    }
+    .gridfolio--block-tags span {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    &.black-texture-#{$i} .gridfolio--block-content {
+      background-image: url(../assets/black-texture-#{$i}.jpg);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    &.white-texture-#{$i} .gridfolio--block-content {
+      background-image: url(../assets/white-texture-#{$i}.jpg);
+    }
+  }
+
+  &.solid-blue .gridfolio--block-content {
+    background-color: #00aeef;
+  }
+
+  &.solid-yellow .gridfolio--block-content {
+    background-color: #ffc82b;
+  }
+
+  &.solid-pink .gridfolio--block-content {
+    background-color: #ff4198;
+  }
+
+  &.solid-red .gridfolio--block-content {
+    background-color: #ff5341;
+  }
+
+  &.solid-green .gridfolio--block-content {
+    background-color: #8ed51e;
+  }
+}

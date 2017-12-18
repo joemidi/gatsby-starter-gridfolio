@@ -1,0 +1,62 @@
+.gridfolio[data-theme="brutalist"] {
+  .gridfolio--block{
+    &-content {
+      background-color: transparent;
+      border-bottom: 10px solid black;
+      padding: 10%;
+      transition: transform 0.4s ease-in-out;
+    }
+    &-title {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &-content:hover {
+      transform: rotateZ(5deg);
+
+      &-title {
+        transform: rotateZ(-10deg);
+      }
+    }
+
+    &-title-wrapper {
+      font-size: 50px;
+      @media (min-width: 500px) {
+        font-size: 30px;
+      }
+      @media (min-width: 900px) {
+        font-size: 50px;
+      }
+    }
+
+    &-title {
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -0.1em;
+      line-height: 0.6;
+    }
+
+    &-description-wrapper {
+      font-size: 15px;
+    }
+
+    &-description {
+      font-family: 'Arial', sans-serif;
+      line-height: 1;
+    }
+
+    &-tags-wrapper {
+      font-size: 7px;
+      letter-spacing: 0.2em;
+      padding-bottom: 20px;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    &-tags span {
+      font-weight: 800;
+      padding: 0 0;
+      margin: 0 0;
+      background-color: transparent;
+    }
+  }
+}
