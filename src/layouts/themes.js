@@ -28,7 +28,7 @@ Button.propTypes = {
 
 const Themes = props => (
   <div className="themes">
-    <p>Available Gridfolio Themes</p>
+    <p>Filter by:</p>
     {props.themes.map(theme => (
       <Button
         key={theme}

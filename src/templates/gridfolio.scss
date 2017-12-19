@@ -1,6 +1,7 @@
 .gridfolio {
   width: 100%;
   margin: 0 -10px;
+  color: #fff;
 
   .gridfolio--block {
     display: inline-block;
@@ -17,7 +18,7 @@
       height: 100%;
       box-sizing: border-box;
       padding: 10px;
-      background-color: #eee;
+      // background-color: #eee;
       display: flex;
       flex-direction: column;
     }
@@ -31,6 +32,7 @@
     }
 
     &-tags-wrapper {
+      color: #000;
       font-size: 8px;
       text-transform: uppercase;
       text-align: center;

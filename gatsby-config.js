@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix: `/gatsby-starter-gridfolio`,
+  pathPrefix: `/`,
   siteMetadata: {
-    title: `Gatsby Starter Gridfolio`,
+    title: `Jellyfish Creative Display Gallery`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
