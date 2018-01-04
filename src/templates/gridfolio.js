@@ -2,21 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withPrefix } from 'gatsby-link';
 
-import '../themes/gridfolio-brutalist.scss';
-import '../themes/gridfolio-circular.scss';
-import '../themes/gridfolio-classic.scss';
-import '../themes/gridfolio-textures.scss';
-import '../themes/gridfolio-warhol.scss';
 import './gridfolio.scss';
 
 const Block = props => (
-  <div
-    className={`gridfolio--block is-animated ${props.className}`}
-    style={{
-      width: '25%',
-      height: 387,
-    }}
-  >
+  <div className={`gridfolio--block is-animated ${props.className}`}>
     <a className="gridfolio--block-link" href={props.url}>
       <div
         className="gridfolio--block-image"
@@ -46,14 +35,7 @@ const Block = props => (
           </p>
         </div>
         <div className="gridfolio--block-tags-wrapper">
-          <div
-            className="gridfolio--block-tags"
-            style={{
-              fontSize: '132.385%',
-            }}
-          >
-            {props.tags.map(tag => <span key={tag}>{tag}</span>)}
-          </div>
+          <div className="gridfolio--block-tags">{props.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
         </div>
       </div>
     </a>

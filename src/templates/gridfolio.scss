@@ -1,49 +1,82 @@
 .gridfolio {
   width: 100%;
-  margin: 0 -10px;
   color: #fff;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   .gridfolio--block {
-    display: inline-block;
-    vertical-align: middle;
+    // display: inline-block;
+    // vertical-align: middle;
     box-sizing: border-box;
-    padding: 10px;
+    // padding: 10px;
+    // height: 250px;
 
     &-link {
-      // Styling for <a> link
+      display: grid;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+
+    &-image {
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
     }
 
     &-content {
+      background-color: rgba(0, 0, 0, 0.62);
       width: 100%;
       height: 100%;
+      padding: 1.5em;
+      position: absolute;
+      opacity: 0;
       box-sizing: border-box;
-      padding: 10px;
-      // background-color: #eee;
       display: flex;
       flex-direction: column;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out;
+      }
     }
 
-    &-title-wrapper {
-      font-size: 16px;
+    &-title {
+      font-weight: 200;
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
     }
 
     &-description-wrapper {
-      font-size: 12px;
+      font-size: 10px;
+    }
+
+    &-description {
+      font-weight: 100;
+      letter-spacing: 0.03em;
+      line-height: 1.6;
     }
 
     &-tags-wrapper {
-      color: #000;
-      font-size: 8px;
-      text-transform: uppercase;
-      text-align: center;
-      width: 100%;
       margin-top: auto;
+      text-align: center;
     }
 
     &-tags span {
       background-color: #fff;
+      color: #000;
+      font-size: 0.6em;
+      letter-spacing: 0.2em;
       padding: 3px;
       margin: 0 3px;
+      display: inline-block;
     }
   }
 
