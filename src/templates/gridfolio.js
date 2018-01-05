@@ -10,7 +10,7 @@ const Block = props => (
       <div
         className="gridfolio--block-image"
         style={{
-          backgroundImage: `url(${withPrefix('/static/') + props.image})`,
+          backgroundImage: `url(${withPrefix('/thumbnails/') + props.image})`,
         }}
       />
       <div className="gridfolio--block-content">
