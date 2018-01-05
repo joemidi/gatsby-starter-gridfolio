@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Gridfolio from '../templates/gridfolio';
 import Intro from './intro';
-import Themes from './themes';
+import Filter from '../components/filter';
 
 import './index.scss';
 import blocks from '../data/blocks.json';
@@ -16,10 +16,6 @@ class TemplateWrapper extends React.Component {
   }
 
   render() {
-    const getTheme = theme => {
-      this.setState({ theme });
-    };
-
     return (
       <div>
         <Helmet
@@ -33,8 +29,8 @@ class TemplateWrapper extends React.Component {
           ]}
         />
         <Intro />
-        <Themes selectTheme={getTheme} activeTheme={this.state.theme} themes={['Vertical', 'Feature', 'Format']} />
-        <Gridfolio theme="classic" blocks={blocks} />
+        <Filter />
+        <Gridfolio theme={this.state.theme} blocks={blocks} />
       </div>
     );
   }

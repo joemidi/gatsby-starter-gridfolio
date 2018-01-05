@@ -1,0 +1,104 @@
+.filter {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1.25em 0;
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+
+  .filter-options {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .filter-toggles {
+    li.filter-toggle {
+      font-size: 0.65em;
+      color: #000;
+      border: 1px solid #333;
+      border-radius: 3px;
+      margin: 3px 4px 3px 0;
+      padding: 11px 12px;
+      display: inline-block;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+
+      &.active {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+
+  .filter-dropdown {
+    font-size: 0.9em;
+
+    &-bg {
+      box-sizing: border-box;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #333;
+      border-radius: 3px;
+      opacity: 0;
+      transition: .20s ease;
+      transform-origin: 0 0;
+    }
+
+    &-menu {
+      overflow: hidden;
+      box-sizing: border-box;
+      border-radius: 3px;
+      position: absolute;
+      opacity: 0;
+      transition: .20s ease;
+      transform-origin: 0 0;
+      visibility: hidden;
+
+      li {
+        margin: 0;
+        padding: 0.8em;
+        display: block;
+
+        &:hover {
+          background-color: #333;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .filter-search {
+    font-size: 0.65em;
+    color: #000;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin: 3px 4px 3px 0;
+    padding: 11px 12px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    justify-self: end;
+    min-width: 280px;
+  }
+}
