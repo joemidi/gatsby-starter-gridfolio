@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/`,
+  pathPrefix: `/cdp/global-gallery`,
   siteMetadata: {
     title: `Jellyfish Creative Display Gallery`,
   },
