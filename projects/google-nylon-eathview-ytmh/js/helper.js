@@ -1,0 +1,1 @@
+"use strict";window.$=function(e,t){return(t=t||document).querySelector(e)};

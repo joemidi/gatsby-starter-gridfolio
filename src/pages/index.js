@@ -1,13 +1,52 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import PropTypes from 'prop-types';
+import Gridfolio from '../components/gridfolio';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-);
+// import blocks from '../data/blocks.json';
 
-export default IndexPage;
+const Index = ({ data }) => {
+  const blocks = data.allMarkdownRemark.edges;
+  console.log(blocks);
+  return (
+    <div>
+      <Gridfolio blocks={blocks} />
+    </div>
+  );
+};
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export default Index;
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            description
+            className
+            url
+            tags
+            width
+            height
+            image {
+              childImageSharp {
+                sizes(maxWidth: 850, quality: 90, traceSVG: { color: "#f3f3f3" }) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -56,25 +56,53 @@ Block.defaultProps = {
   tags: [],
 };
 
+export const ChildImageSharp = {
+  sizes: PropTypes.shape({
+    aspectRatio: PropTypes.number.isRequired,
+    sizes: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    srcSet: PropTypes.string.isRequired,
+    srcSetWebp: PropTypes.string.isRequired,
+    srcWebp: PropTypes.string.isRequired,
+    tracedSVG: PropTypes.string.isRequired,
+  }),
+};
+
+export const Node = {
+  fields: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
+  }),
+  frontmatter: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    image: PropTypes.shape({ ChildImageSharp }).isRequired,
+    tags: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    width: PropTypes.number.isRequired,
+    className: PropTypes.string,
+  }),
+};
+
 const Gridfolio = props => (
-  <div className="gridfolio animates-into-view" data-theme={props.theme}>
+  <div className="gridfolio animates-into-view">
     {props.blocks.map(block => (
       <Block
-        key={block.id}
-        title={block.title}
-        description={block.description}
-        url={block.url}
-        image={block.image}
-        tags={block.tags}
-        className={block.className}
+        key={block.node.fields.slug}
+        title={block.node.frontmatter.title}
+        description={block.node.frontmatter.description}
+        url={block.node.frontmatter.url}
+        image={block.node.frontmatter.url}
+        tags={block.node.frontmatter.tags}
+        className={block.node.frontmatter.className}
       />
     ))}
   </div>
 );
 
 Gridfolio.propTypes = {
-  theme: PropTypes.string.isRequired,
-  blocks: PropTypes.arrayOf(PropTypes.shape({ Block })).isRequired,
+  blocks: PropTypes.arrayOf(PropTypes.shape(Node)).isRequired,
 };
 
 export default Gridfolio;

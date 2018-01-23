@@ -1,0 +1,1 @@
+"use strict";window.earthview=window.earthview||{},window.earthview.config={MAPS_LINK:"https://www.google.com/maps/@{{lat}},{{lng}},{{zoom}}z/data=!3m1!1e3",IMAGE_IDS:[1057,1399,5555,1475,1388,1514],IMAGE_BASE_URL:"https://s0.2mdn.net/ads/richmedia/studio/39417961/",BASE_URL:"https://earthview.withgoogle.com/",SHARE_BASE_URL:"https://g.co/ev/"};

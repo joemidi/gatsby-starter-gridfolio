@@ -1,0 +1,8 @@
+{
+  "name": "my-own-plugin",
+  "version": "1.0.0",
+  "author": "Joey Padasian <joey@padasian.com>",
+  "dependencies": {
+    "fs-extra": "^5.0.0"
+  }
+}
