@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Intro from './intro';
-
 import './index.scss';
 // import blocks from '../data/blocks.json';
 
@@ -18,7 +16,6 @@ const TemplateWrapper = ({ children }) => (
         },
       ]}
     />
-    <Intro />
     {children()}
   </div>
 );

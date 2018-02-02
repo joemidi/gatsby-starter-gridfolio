@@ -6,29 +6,16 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   .gridfolio--block {
-    // display: inline-block;
-    // vertical-align: middle;
     box-sizing: border-box;
-    // padding: 10px;
-    // height: 250px;
 
     &-link {
       display: grid;
       width: 100%;
       height: 100%;
-
-      &:before {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
     }
 
     &-image {
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      position: absolute;
+
     }
 
     &-content {

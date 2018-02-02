@@ -1,33 +1,36 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import styles from './project.module.scss';
+// import Helmet from 'react-helmet';
+import './project.scss';
 
-const Project = () => {
-  const { slug } = this.props.pathContext;
-  const postNode = this.props.data.markdownRemark;
+const Project = props => {
+  const { slug } = props.pathContext;
+  const postNode = props.data.markdownRemark;
   const project = postNode.frontmatter;
-  // const imageURL = project.image.childImageSharp.resize.src;
-  if (!project.id) {
-    project.id = slug;
-  }
+
   return (
-    <div className="container project-container">
-      <Helmet title={`${project.title}`} />
-      <div className={styles.headerWrapper}>
-        <span>{project.title}</span>
-        <span>{project.description}</span>
-        <span>{project.url}</span>
-        <span>{project.tags}</span>
-        <span>{project.date}</span>
-        <span>{slug}</span>
-        <iframe
-          title={project.title}
-          width={project.width}
-          height={project.height}
-          src={`/projects/${slug}/index.html`}
-          frameBorder="0"
-        />
+    <div className="project-container">
+      <div className="header">
+        <h1>JellyFish</h1>
       </div>
+      <div className="content">
+        <div className="main">
+          <div className="title" />
+        </div>
+        <div className="sidebar" />
+      </div>
+      <span>{project.title}</span>
+      <span>{project.description}</span>
+      <span>{project.url}</span>
+      <span>{project.tags}</span>
+      <span>{slug}</span>
+      <iframe
+        title={project.title}
+        width={project.width}
+        height={project.height}
+        src={`/projects/${slug}/index.html`}
+        frameBorder="0"
+        scrolling="no"
+      />
     </div>
   );
 };

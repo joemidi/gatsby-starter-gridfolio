@@ -4,6 +4,8 @@
 var Banner = Banner || {},
     addListeners,
     exitHandler,
+    overHandler,
+		outHandler,
     mainPhone = document.getElementById('main-phone'),
     copy1 = document.getElementById('copy1'),
     copy2 = document.getElementById('copy2'),

@@ -22,7 +22,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
     if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
       const parent = path.basename(path.join(node.parent, '../'));
-      slug = `/${_.kebabCase(parent)}`
+      slug = `${_.kebabCase(parent)}`
     }
 
     createNodeField({ node, name: 'slug', value: slug })

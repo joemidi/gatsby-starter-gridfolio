@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withPrefix } from 'gatsby-link';
+import Img from 'gatsby-image';
+import Link from 'gatsby-link';
 
 import './gridfolio.scss';
 
 const Block = props => (
   <div className={`gridfolio--block is-animated ${props.className}`}>
-    <a className="gridfolio--block-link" href={props.url}>
-      <div
-        className="gridfolio--block-image"
-        style={{
-          backgroundImage: `url(${withPrefix('/thumbnails/') + props.image})`,
-        }}
-      />
+    <Link key={props.slug} to={props.slug} className="gridfolio--block-link">
+      <Img className="gridfolio--block-image" sizes={props.image.childImageSharp.sizes} />
       <div className="gridfolio--block-content">
         <div className="gridfolio--block-title-wrapper">
           <h2
@@ -38,33 +34,21 @@ const Block = props => (
           <div className="gridfolio--block-tags">{props.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
         </div>
       </div>
-    </a>
+    </Link>
   </div>
 );
 
-Block.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  className: PropTypes.string.isRequired,
-};
-
-Block.defaultProps = {
-  image: '',
-  tags: [],
-};
-
 export const ChildImageSharp = {
-  sizes: PropTypes.shape({
-    aspectRatio: PropTypes.number.isRequired,
-    sizes: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    srcSet: PropTypes.string.isRequired,
-    srcSetWebp: PropTypes.string.isRequired,
-    srcWebp: PropTypes.string.isRequired,
-    tracedSVG: PropTypes.string.isRequired,
+  childImageSharp: PropTypes.shape({
+    sizes: PropTypes.shape({
+      aspectRatio: PropTypes.number.isRequired,
+      sizes: PropTypes.string.isRequired,
+      src: PropTypes.string.isRequired,
+      srcSet: PropTypes.string.isRequired,
+      srcSetWebp: PropTypes.string.isRequired,
+      srcWebp: PropTypes.string.isRequired,
+      tracedSVG: PropTypes.string.isRequired,
+    }),
   }),
 };
 
@@ -76,7 +60,7 @@ export const Node = {
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     height: PropTypes.number.isRequired,
-    image: PropTypes.shape({ ChildImageSharp }).isRequired,
+    image: PropTypes.shape(ChildImageSharp).isRequired,
     tags: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
@@ -85,15 +69,30 @@ export const Node = {
   }),
 };
 
+Block.propTypes = {
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.shape(ChildImageSharp),
+  tags: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string,
+};
+
+Block.defaultProps = {
+  tags: [],
+  image: '',
+  className: '',
+};
+
 const Gridfolio = props => (
   <div className="gridfolio animates-into-view">
     {props.blocks.map(block => (
       <Block
         key={block.node.fields.slug}
+        slug={block.node.fields.slug}
         title={block.node.frontmatter.title}
         description={block.node.frontmatter.description}
-        url={block.node.frontmatter.url}
-        image={block.node.frontmatter.url}
+        image={block.node.frontmatter.image}
         tags={block.node.frontmatter.tags}
         className={block.node.frontmatter.className}
       />
