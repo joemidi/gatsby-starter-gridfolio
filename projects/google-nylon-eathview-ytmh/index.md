@@ -8,8 +8,9 @@ date: 2017-10-25
 width: 970
 height: 250
 tags:
+  - Google
   - Google Maps
   - Google Earthview
-  - SVG D3
+  - D3
   - YouTube Masthead
 ---

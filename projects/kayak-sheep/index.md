@@ -8,8 +8,8 @@ date: 2017-10-25
 width: 970
 height: 250
 tags:
+  - Kayak
   - Billboard
-  - Interactive
-  - Rapid Prototype
   - Departure Board
+  - Standard Animation
 ---

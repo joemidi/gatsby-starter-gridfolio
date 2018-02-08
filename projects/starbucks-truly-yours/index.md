@@ -9,7 +9,7 @@ width: 300
 height: 600
 className: default
 tags:
-  - Billboard
-  - Interactive
-  - Rapid Prototype
+  - Starbucks
+  - Double-MPU
+  - Standard Animation
 ---

@@ -8,6 +8,7 @@ date: 2017-10-25
 width: 970
 height: 250
 tags:
+  - beats by dre
   - Billboard
   - Interactive
   - Rapid Prototype

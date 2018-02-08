@@ -47,5 +47,24 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: `@andrew-codes/gatsby-plugin-elasticlunr-search`,
+      options: {
+        fields: [
+          'title',
+          'description',
+          'tags',
+          'slug',
+        ],
+        resolvers: {
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            description: node => node.frontmatter.description,
+            tags: node => node.frontmatter.tags,
+            slug: node => node.fields.slug,
+          },
+        },
+      },
+    },
   ],
 }

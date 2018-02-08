@@ -8,7 +8,8 @@ date: 2017-10-25
 width: 300
 height: 600
 tags:
-  - Billboard
+  - androidone
+  - Double-MPU
   - Interactive
   - Rapid Prototype
 ---

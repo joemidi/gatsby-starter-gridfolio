@@ -6,31 +6,34 @@ const Project = props => {
   const { slug } = props.pathContext;
   const postNode = props.data.markdownRemark;
   const project = postNode.frontmatter;
+  const { width, height } = project;
+  const ratio = width / height;
+
+  const banner = () => (
+    <iframe
+      title={project.title}
+      width={project.width}
+      height={project.height}
+      src={`/projects/${slug}/index.html`}
+      frameBorder="0"
+      scrolling="no"
+    />
+  );
 
   return (
     <div className="project-container">
+      {ratio > 1.25 && <div className="banner-wrapper">{banner()}</div>}
       <div className="header">
         <h1>JellyFish</h1>
       </div>
       <div className="content">
         <div className="main">
-          <div className="title" />
+          <h2 className="title">{project.title}</h2>
+          <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+          <p className="description">{project.description}</p>
         </div>
-        <div className="sidebar" />
+        <div className="sidebar">{ratio <= 1.25 && <div className="banner-wrapper">{banner()}</div>}</div>
       </div>
-      <span>{project.title}</span>
-      <span>{project.description}</span>
-      <span>{project.url}</span>
-      <span>{project.tags}</span>
-      <span>{slug}</span>
-      <iframe
-        title={project.title}
-        width={project.width}
-        height={project.height}
-        src={`/projects/${slug}/index.html`}
-        frameBorder="0"
-        scrolling="no"
-      />
     </div>
   );
 };

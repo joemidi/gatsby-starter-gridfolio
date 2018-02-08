@@ -8,6 +8,7 @@ date: 2017-10-25
 width: 970
 height: 250
 tags:
+  - Aviva Investors
   - Billboard
   - Interactive
   - Rapid Prototype
