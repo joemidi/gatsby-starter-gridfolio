@@ -1,0 +1,14 @@
+@import '../styles/color';
+
+.footer {
+  background-color: $black;
+  min-height: 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  span {
+    color: $warm-grey;
+    padding-left: 2rem;
+  }
+}

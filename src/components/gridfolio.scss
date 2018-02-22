@@ -1,9 +1,15 @@
+@import '../styles/color';
+
 .gridfolio {
+  background-color: $pale-grey;
   width: 100%;
   color: #fff;
+  flex: 1;
   display: grid;
   grid-gap: 1em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  box-sizing: border-box;
+  padding: 2.5rem 2rem;
 
   .gridfolio--block {
     box-sizing: border-box;

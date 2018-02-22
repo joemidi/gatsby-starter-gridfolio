@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 import './gridfolio.scss';
 
 const Block = props => (
-  <div className={`gridfolio--block is-animated ${props.className}`} style={{ display: 'none' }}>
+  <div className={`gridfolio--block is-animated ${props.className}`} style={{ height: '100%' }}>
     <Link key={props.slug} to={props.slug} className="gridfolio--block-link">
       <Img className="gridfolio--block-image" sizes={props.image.childImageSharp.sizes} />
       <div className="gridfolio--block-content">
