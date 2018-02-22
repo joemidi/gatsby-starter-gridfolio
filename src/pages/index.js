@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Intro from '../components/intro';
 import Gridfolio from '../components/gridfolio';
+import Header from '../components/header';
 
 const Index = ({ data }) => {
   const blocks = data.allMarkdownRemark.edges;
   return (
     <div>
-      <Intro />
+      <Header />
       <Gridfolio blocks={blocks} />
     </div>
   );

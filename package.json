@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Joey Padasian <joey@padasian.com>",
   "dependencies": {
-    "gatsby": "^1.9.127",
+    "gatsby": "^1.9.203",
     "gatsby-image": "^1.0.31",
     "gatsby-link": "^1.6.30",
     "gatsby-plugin-lodash": "^1.0.7",

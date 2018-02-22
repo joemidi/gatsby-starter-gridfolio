@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children }) => (
       meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
       link={[
         {
-          href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro',
+          href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600',
           rel: 'stylesheet',
         },
       ]}
