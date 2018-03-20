@@ -1,9 +1,11 @@
 ---
 title: Google - Earthview YouTube Masthead
-slug: beats-xmas-select
+slug: google-earthview
+brand: google
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+category: banners
 url: http://banners.jellyfishhosting.net/cdp/internal-showcase/beats-xmas-selector/#970x250-v1
-image: ./earthview.png
+image: ./google_earthview.png
 date: 2017-10-25
 width: 970
 height: 250

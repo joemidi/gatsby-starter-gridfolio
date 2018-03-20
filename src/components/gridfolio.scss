@@ -1,75 +1,74 @@
 @import '../styles/color';
 
-.gridfolio {
+.grid-wrapper {
+  flex: 1;
   background-color: $pale-grey;
+}
+
+.gridfolio {
   width: 100%;
   color: #fff;
-  flex: 1;
   display: grid;
-  grid-gap: 1em;
+  grid-gap: 2em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   box-sizing: border-box;
   padding: 2.5rem 2rem;
 
   .gridfolio--block {
+    color: black;
     box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid $warm-grey;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 
     &-link {
-      display: grid;
-      width: 100%;
-      height: 100%;
+      display: block;
     }
 
     &-image {
-
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    &-content {
-      background-color: rgba(0, 0, 0, 0.62);
-      width: 100%;
-      height: 100%;
-      padding: 1.5em;
-      position: absolute;
-      opacity: 0;
-      box-sizing: border-box;
+    &-details {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      height: 80px;
+      border-top: 1px solid $white;
+    }
 
-      &:hover {
-        opacity: 1;
-        transition: opacity 0.4s ease-in-out;
-      }
+    &-logo {
+      height: 100%;
+      max-width: 80px;
+      display: block;
+    }
+
+    &-text {
+      background: $white;
+      color: $black;
+      flex-grow: 1;
+      overflow: hidden;
+      padding: 1.2em 0.6em;
     }
 
     &-title {
       font-weight: 200;
-      letter-spacing: 0.06em;
-      margin-bottom: 20px;
+      white-space: nowrap;
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    &-description-wrapper {
-      font-size: 10px;
-    }
-
-    &-description {
-      font-weight: 100;
-      letter-spacing: 0.03em;
-      line-height: 1.6;
-    }
-
-    &-tags-wrapper {
-      margin-top: auto;
-      text-align: center;
-    }
-
-    &-tags span {
-      background-color: #fff;
-      color: #000;
-      font-size: 0.6em;
-      letter-spacing: 0.2em;
-      padding: 3px;
-      margin: 0 3px;
-      display: inline-block;
+    &-category {
+      color: $warm-grey;
+      font-size: 0.85em;
+      margin: 0;
+      margin-top: 0.6em;
+      text-transform: capitalize;
     }
   }
 

@@ -10,44 +10,11 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  min-height: 64px;
 
   .brand {
     padding-left: 2rem;
     margin-top: 5px;
-  }
-
-  .navigation {
-    margin-left: auto;
-
-    ul {
-      list-style: none;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-
-      li {
-        height: 100%;
-        box-sizing: border-box;
-        border-bottom: 4px solid transparent;
-
-        &:hover {
-          border-bottom: 4px solid $dark-sky-blue;
-        }
-
-        a {
-          text-decoration: none;
-          display: block;
-          padding: 1em;
-          margin-top: 0.45rem;
-          color: white;
-        }
-      }
-    }
-
-    .contact {
-      font-weight: 600;
-      color: $dark-sky-blue;
-    }
   }
 
   .search {

@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import './navigation.scss';
+
 const Navigation = () => (
   <div className="navigation">
     <ul>
@@ -14,10 +16,10 @@ const Navigation = () => (
         <Link to="/">Video</Link>
       </li>
       <li>
-        <Link to="/">Website</Link>
+        <Link to="/">Email</Link>
       </li>
       <li>
-        <Link to="/">Email</Link>
+        <Link to="/">Website</Link>
       </li>
       <li>
         <a className="contact" href="mailto:hello@jellyfish.co.uk">

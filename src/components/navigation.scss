@@ -1,0 +1,35 @@
+@import '../styles/color';
+
+.navigation {
+  margin-left: auto;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      height: 100%;
+      box-sizing: border-box;
+      border-bottom: 4px solid transparent;
+
+      &:hover {
+        border-bottom: 4px solid $dark-sky-blue;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        margin-top: 0.45rem;
+        color: white;
+      }
+    }
+  }
+
+  .contact {
+    font-weight: 600;
+    color: $dark-sky-blue;
+  }
+}

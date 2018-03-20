@@ -38,6 +38,8 @@ export const Node = {
   frontmatter: PropTypes.shape({
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    brand: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     height: PropTypes.number.isRequired,
     image: PropTypes.shape({ ChildImageSharp }).isRequired,
     tags: PropTypes.string.isRequired,
@@ -68,6 +70,8 @@ export const pageQuery = graphql`
             title
             date
             description
+            brand
+            category
             className
             url
             tags

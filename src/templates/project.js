@@ -48,6 +48,8 @@ export const pageQuery = graphql`
         title
         className
         date
+        category
+        brand
         description
         url
         tags

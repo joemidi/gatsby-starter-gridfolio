@@ -55,6 +55,8 @@ module.exports = {
           'description',
           'tags',
           'slug',
+          'brand',
+          'category',
         ],
         resolvers: {
           MarkdownRemark: {
@@ -62,6 +64,8 @@ module.exports = {
             description: node => node.frontmatter.description,
             tags: node => node.frontmatter.tags,
             slug: node => node.fields.slug,
+            brand: node => node.fields.brand,
+            category: node => node.fields.category,
           },
         },
       },
