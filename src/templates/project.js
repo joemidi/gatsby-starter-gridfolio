@@ -1,5 +1,8 @@
 import React from 'react';
 // import Helmet from 'react-helmet';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import Placeholder from '../components/placeholder';
 import './project.scss';
 
 const Project = props => {
@@ -21,19 +24,25 @@ const Project = props => {
   );
 
   return (
-    <div className="project-container">
-      {ratio > 1.25 && <div className="banner-wrapper">{banner()}</div>}
-      <div className="header">
-        <h1>JellyFish</h1>
-      </div>
-      <div className="content">
+    <div className="content">
+      <Header />
+      <div className="project">
+        <div className="sidebar">Sidebar</div>
         <div className="main">
-          <h2 className="title">{project.title}</h2>
-          <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-          <p className="description">{project.description}</p>
+          <Placeholder>
+            <div>
+              <div className="details">
+                <h2 className="title">{project.title}</h2>
+                <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+                <p className="description">{project.description}</p>
+              </div>
+              {ratio > 1.25 && <div className="banner-wrapper">{banner()}</div>}
+              {ratio <= 1.25 && <div className="banner-wrapper">{banner()}</div>}
+            </div>
+          </Placeholder>
         </div>
-        <div className="sidebar">{ratio <= 1.25 && <div className="banner-wrapper">{banner()}</div>}</div>
       </div>
+      <Footer />
     </div>
   );
 };
