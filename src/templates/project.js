@@ -1,5 +1,6 @@
 import React from 'react';
 // import Helmet from 'react-helmet';
+import kebabCase from 'lodash/kebabCase';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Placeholder from '../components/placeholder';
@@ -9,37 +10,39 @@ const Project = props => {
   const { slug } = props.pathContext;
   const postNode = props.data.markdownRemark;
   const project = postNode.frontmatter;
-  const { width, height } = project;
-  const ratio = width / height;
+  const currentBanner = project.banners[0];
+  const basePath = `/projects/${slug}/`;
 
-  const banner = () => (
-    <iframe
-      title={project.title}
-      width={project.width}
-      height={project.height}
-      src={`/projects/${slug}/index.html`}
-      frameBorder="0"
-      scrolling="no"
-    />
-  );
+  const activateLasers = element => {
+    console.log(element);
+  };
 
   return (
     <div className="content">
       <Header />
       <div className="project">
-        <div className="sidebar">Sidebar</div>
+        <div className="sidebar">
+          <h2 className="title">{project.title}</h2>
+          <p className="description">{project.description}</p>
+          <div className="details">
+            <h3>Tags</h3>
+            <p>{project.tags.join(', ')}</p>
+          </div>
+          <div className="banners">
+            <h3>Banners</h3>
+            <ul>
+              {project.banners.map(banner => (
+                <li key={kebabCase(banner.name)}>
+                  <a href="" onClick={activateLasers} onKeyPress={activateLasers} role="button">
+                    {banner.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <div className="main">
-          <Placeholder>
-            <div>
-              <div className="details">
-                <h2 className="title">{project.title}</h2>
-                <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-                <p className="description">{project.description}</p>
-              </div>
-              {ratio > 1.25 && <div className="banner-wrapper">{banner()}</div>}
-              {ratio <= 1.25 && <div className="banner-wrapper">{banner()}</div>}
-            </div>
-          </Placeholder>
+          <Placeholder basePath={basePath} banner={currentBanner} />
         </div>
       </div>
       <Footer />
@@ -56,6 +59,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         className
+        banners {
+          name
+          src
+          width
+          height
+        }
         date
         category
         brand

@@ -30,6 +30,7 @@
     "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
     "deploy": "gatsby build --prefix-paths && bash deploy.sh",
     "format": "prettier --write \"src/**/*.js\"",
+    "clear": "rm -rf .cache && rm -rf public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -43,7 +44,7 @@
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.5.1",
     "gh-pages": "^1.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "prettier": "^1.8.2",
     "qs": "^6.5.1"
   }

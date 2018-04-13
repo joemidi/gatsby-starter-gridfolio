@@ -87,4 +87,15 @@
         #ffffff 120px
       );
   }
+  &--masthead {
+    max-width: 970px;
+    max-height: 250px;
+    margin: 1em auto;
+    text-align: center;
+  }
+  &--skyscraper {
+    max-width: 300px;
+    max-height: 600px;
+    margin: 1.25em;
+  }
 }
