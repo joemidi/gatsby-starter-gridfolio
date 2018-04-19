@@ -40,6 +40,7 @@
     h3 {
       font-size: 1em;
       padding-bottom: 0.5rem;
+      border-bottom: 1px solid #E2E2E2;
     }
 
     ul {
@@ -47,26 +48,33 @@
       margin: 0;
       padding: 0;
 
-      :first-child {
-        border-top: 1px solid #E2E2E2;
-      }
-
       li {
-        color: $warm-grey;
-        padding: 1em 0;
-        border-bottom: 1px solid #E2E2E2;
+        button {
+          background: none;
+          color: inherit;
+          border: none;
+          padding: 0;
+          font: inherit;
+          cursor: pointer;
+          outline: inherit;
+          color: $warm-grey;
+          padding: 1em 0;
+          border-bottom: 1px solid #E2E2E2;
+          width: 100%;
+          text-align: left;
 
-        &::after {
-          content: ">";
-          display: inline-block;
-          float: right;
-          margin-right: 1em;
-          font-weight: bold;
-          color: $black;
-        }
+          &::after {
+            content: ">";
+            display: inline-block;
+            float: right;
+            margin-right: 1em;
+            font-weight: bold;
+            color: $black;
+          }
 
-        &:hover {
-          background-color: $pale-grey;
+          &:hover {
+            background-color: $pale-grey;
+          }
         }
       }
     }
