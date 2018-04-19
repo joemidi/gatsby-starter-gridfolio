@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withPrefix } from 'gatsby-link';
 import './placeholder.scss';
 
 const Placeholder = props => {
@@ -12,7 +13,7 @@ const Placeholder = props => {
       title={banner.name}
       width={width}
       height={height}
-      src={`${basePath}${banner.src}/index.html`}
+      src={withPrefix(`${basePath}${banner.src}/index.html`)}
       frameBorder="0"
       scrolling="no"
     />

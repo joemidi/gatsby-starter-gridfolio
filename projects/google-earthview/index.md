@@ -15,4 +15,9 @@ tags:
   - Google Earthview
   - D3
   - YouTube Masthead
+banners:
+  - name: Google EarthView YouTube Masthead
+    src: google-earthview-970x250
+    width: 970
+    height: 250
 ---

@@ -14,4 +14,9 @@ tags:
   - Billboard
   - Interactive
   - Rapid Prototype
+banners:
+  - name: beats by dre - Christmas Product Selector
+    src: beats-xmas-selector-970x250
+    width: 970
+    height: 250
 ---

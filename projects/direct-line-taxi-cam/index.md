@@ -15,4 +15,9 @@ tags:
   - Google Maps API
   - Open Weather Map API
   - Geo-location targeting
+banners:
+  - name: Taxi-Cam - 970x250
+    src: direct-line-taxi-cam-970x250
+    width: 970
+    height: 250
 ---

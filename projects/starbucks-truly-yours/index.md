@@ -14,4 +14,9 @@ tags:
   - Starbucks
   - Double-MPU
   - Standard Animation
+banners:
+  - name: Truly Yours - 300x600
+    src: starbucks-truly-yours-300x600
+    width: 300
+    height: 600
 ---

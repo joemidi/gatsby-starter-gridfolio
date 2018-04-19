@@ -7,7 +7,7 @@ import './gridfolio.scss';
 
 const Block = props => (
   <div className={`gridfolio--block is-animated ${props.className}`} style={{ height: '100%' }}>
-    <Link key={props.slug} to={props.slug} className="gridfolio--block-link">
+    <Link key={props.slug} to={`/${props.slug}`} className="gridfolio--block-link">
       <Img className="gridfolio--block-image" sizes={props.image.childImageSharp.sizes} />
       <div className="gridfolio--block-details">
         <img className="gridfolio--block-logo" alt={props.title} src={withPrefix(`/brands/${props.brand}.png`)} />

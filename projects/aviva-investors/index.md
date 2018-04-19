@@ -14,4 +14,17 @@ tags:
   - Billboard
   - Interactive
   - Rapid Prototype
+banners:
+  - name: Aviva Investors - 300x250
+    src: aviva-investors-300x250
+    width: 300
+    height: 250
+  - name: Aviva Investors - 300x600
+    src: aviva-investors-300x600
+    width: 300
+    height: 600
+  - name: Aviva Investors - 970x250
+    src: aviva-investors-970x250
+    width: 970
+    height: 250
 ---
