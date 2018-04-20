@@ -6,6 +6,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 category: banners
 url: http://banners.jellyfishhosting.net/cdp/internal-showcase/beats-xmas-selector/#970x250-v1
 image: ./nutmeg-ppc.png
+template: banner
 date: 2018-03-20
 width: 300
 height: 600

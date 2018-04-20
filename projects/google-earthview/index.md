@@ -6,6 +6,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 category: banners
 url: http://banners.jellyfishhosting.net/cdp/internal-showcase/beats-xmas-selector/#970x250-v1
 image: ./google_earthview.png
+template: banner
 date: 2017-10-25
 width: 970
 height: 250

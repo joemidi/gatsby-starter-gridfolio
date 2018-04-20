@@ -4,7 +4,7 @@ import kebabCase from 'lodash/kebabCase';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Placeholder from '../components/placeholder';
-import './project.scss';
+import './banner.scss';
 
 const BannerLink = props => {
   const handleClick = () => {
@@ -109,6 +109,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        template
       }
       excerpt
     }

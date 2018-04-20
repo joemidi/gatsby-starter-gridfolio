@@ -65,6 +65,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            template
           }
           frontmatter {
             title
