@@ -83,6 +83,18 @@
   .main {
     overflow: auto;
     flex-grow: 1;
+
+    .video-backdrop {
+      width: 100%;
+      height: 100%;
+      background: $black;
+      padding-top: 2em;
+      box-sizing: border-box;
+
+      div {
+        margin: 0 auto;
+      }
+    }
   }
 
   .banner-wrapper {
