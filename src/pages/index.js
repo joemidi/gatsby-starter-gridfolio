@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Gridfolio from '../components/gridfolio';
 import Header from '../components/header';
-import Masthead from '../components/masthead';
 import Footer from '../components/footer';
 
 const Index = ({ data }) => {
@@ -10,7 +9,6 @@ const Index = ({ data }) => {
   return (
     <div className="content">
       <Header />
-      <Masthead />
       <Gridfolio blocks={blocks} />
       <Footer />
     </div>

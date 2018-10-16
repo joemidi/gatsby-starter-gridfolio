@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Navigation from '../components/navigation';
 
 import './header.scss';
 import logo from '../assets/logo.svg';
@@ -12,7 +11,6 @@ const Header = () => (
     <Link className="brand" to="/">
       <img src={logo} alt="Jellyfish Creative" />
     </Link>
-    <Navigation />
     <div className="search">
       <input type="text" placeholder="Search" />
       <div className="icon icon-search">

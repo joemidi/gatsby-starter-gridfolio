@@ -9,7 +9,9 @@ image: ./image.png
 template: video
 date: 2018-04-23
 tags:
-  - Facebook
-  - "360"
-  - NatGeo
+    - Travel
+    - Facebook
+    - "360"
+    - NatGeo
+    - North America
 ---

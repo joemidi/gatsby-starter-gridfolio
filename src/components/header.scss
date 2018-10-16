@@ -21,7 +21,8 @@
     background-color: $white;
     width: 4rem;
     height: 4rem;
-    position: relative;
+    position: absolute;
+    right: 0;
 
     &:focus-within {
       width: 300px;

@@ -32,7 +32,7 @@ class Project extends React.Component {
           </div>
           <div className="main">
             <div className="video-backdrop">
-              <ReactPlayer url={this.state.videoUrl} width="1024" height="576" playing />
+              <ReactPlayer url={this.state.videoUrl} width="1024px" height="576px" playing controls />
             </div>
           </div>
         </div>
