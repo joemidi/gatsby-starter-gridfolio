@@ -17,17 +17,19 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
-  let slug, template
+  let slug, template, brand;
 
   if (node.internal.type === 'MarkdownRemark') {
     if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
       const parent = path.basename(path.join(node.parent, '../'));
       slug = `${_.kebabCase(parent)}`
-      template = node.frontmatter.template
+      template = node.frontmatter.template;
+      brand = node.frontmatter.brand;
     }
 
     createNodeField({ node, name: 'slug', value: slug })
     createNodeField({ node, name: 'template', value: template })
+    createNodeField({ node, name: 'brand', value: brand })
   }
 }
 
